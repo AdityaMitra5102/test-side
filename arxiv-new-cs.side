@@ -1,0 +1,58 @@
+{
+  "id": "1ddfc08a-5795-4be2-98b0-479f66b722da",
+  "version": "2.0",
+  "name": "Arxiv_cs",
+  "url": "https://arxiv.org",
+  "tests": [{
+    "id": "f462e0a3-9fff-4d0d-af79-ded60076e205",
+    "name": "arxiv-cs-latest",
+    "commands": [{
+      "id": "e975e30e-4f51-4ef3-a17e-822c13abd539",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "185c864d-6307-4e28-a1f8-90d9382c8314",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-cs",
+      "targets": [
+        ["id=recent-cs", "id"],
+        ["css=#recent-cs", "css:finder"],
+        ["xpath=(//a[contains(text(),'recent')])[15]", "xpath:link"],
+        ["xpath=//a[@id='recent-cs']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/ul[3]/li/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/list/cs/recent')]", "xpath:href"],
+        ["xpath=//ul[3]/li/a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "143f04de-0aee-4346-973a-02dd171e5493",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=pdf",
+      "targets": [
+        ["linkText=pdf", "linkText"],
+        ["css=dt:nth-child(1) a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'pdf')]", "xpath:link"],
+        ["xpath=//div[@id='dlpage']/dl/dt/span/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/pdf/2402.19481')]", "xpath:href"],
+        ["xpath=//span/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "8058a001-c83a-4f5c-855a-ed50d62a62d1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f462e0a3-9fff-4d0d-af79-ded60076e205"]
+  }],
+  "urls": ["https://arxiv.org/"],
+  "plugins": []
+}
